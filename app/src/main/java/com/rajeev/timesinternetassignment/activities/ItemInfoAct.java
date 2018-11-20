@@ -573,28 +573,6 @@ public class ItemInfoAct extends AppCompatActivity implements View.OnClickListen
         return s.substring(0, s.length()-1);
     }
 
-    /*NOTIFICATION*/
-
-
-    private void scheduleNotification(Notification notification, int delay) {
-
-        Intent notificationIntent = new Intent(this, NotificationBR.class);
-        notificationIntent.putExtra(NotificationBR.NOTIFICATION_ID, 1);
-        notificationIntent.putExtra(NotificationBR.NOTIFICATION, notification);
-        PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 0, notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT);
-
-        long futureInMillis = SystemClock.elapsedRealtime() + delay;
-        AlarmManager alarmManager = (AlarmManager)getSystemService(Context.ALARM_SERVICE);
-        alarmManager.set(AlarmManager.ELAPSED_REALTIME_WAKEUP, futureInMillis, pendingIntent);
-    }
-
-    private Notification getNotification(String content) {
-        Notification.Builder builder = new Notification.Builder(this);
-        builder.setContentTitle("Scheduled Notification");
-        builder.setContentText(content);
-        builder.setSmallIcon(R.mipmap.ic_launcher);
-        return builder.build();
-    }
 
 
 
