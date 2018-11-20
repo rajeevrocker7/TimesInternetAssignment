@@ -11,9 +11,12 @@ another view with a larger image, other information and schedule a notification 
 request to API #2 and will take user to activity 2
 
 // In App :
-Main Activity: Used to show products list (api 1)
-ItemInfo activity: Used to show details of product (api 2)
-Retrofit 2: Used for restful Api
+Main Activity: Used to show products list (api 1) ,
+
+ItemInfo activity: Used to show details of product (api 2) ,
+
+Retrofit 2: Used for restful Api ,
+
 NotifyService : Used for Custom Notification.
 
 
