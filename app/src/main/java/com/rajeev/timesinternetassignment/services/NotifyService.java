@@ -103,13 +103,16 @@ public class NotifyService extends IntentService {
             Bitmap normalLargeIcon = BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher);
             String NOTIFICATION_CHANNEL_ID = "1";
 
+            //SET CUSTOM REMOTE VIEW
             RemoteViews contentView = new RemoteViews(getPackageName(), R.layout.custom_notify);
             contentView.setImageViewResource(R.id.img_appIcon, R.mipmap.ic_launcher);
             contentView.setTextViewText(R.id.tv_title, title);
             contentView.setTextViewText(R.id.tv_msg, message);
-            contentView.setImageViewBitmap(R.id.img_B_notification, bitmap_n);
 
+            if(bitmap_n!=null)
+                contentView.setImageViewBitmap(R.id.img_B_notification, bitmap_n);
 
+            //MAKE NOTIFICATION BUILDER
             Uri defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
             NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this, NOTIFICATION_CHANNEL_ID)
                     .setSmallIcon(icon)
@@ -157,6 +160,7 @@ public class NotifyService extends IntentService {
             return BitmapFactory.decodeStream(input);
 
         } catch (Exception e) {
+            Log.e("NotifyService", "Decoding Bitmap stream failed");
             e.printStackTrace();
             return null;
 
