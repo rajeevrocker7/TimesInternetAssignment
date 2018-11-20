@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "517300932443",
+    "firebase_url": "https://timesinternetassignment.firebaseio.com",
+    "project_id": "timesinternetassignment",
+    "storage_bucket": "timesinternetassignment.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:517300932443:android:d15d6673d3cc82b3",
+        "android_client_info": {
+          "package_name": "com.rajeev.timesinternetassignment"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "517300932443-tlhpb54eggb8ffi8ahl0lel5351tkf1o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rajeev.timesinternetassignment",
+            "certificate_hash": "fbfd2020208b1c83e64db51eb6136638c7520b3b"
+          }
+        },
+        {
+          "client_id": "517300932443-uup6rgdkd5mr7l0vghivvmro8ea6qvtb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSJorls8qGMuth2UyDSfVLFxrt0JV2tJo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "517300932443-uup6rgdkd5mr7l0vghivvmro8ea6qvtb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

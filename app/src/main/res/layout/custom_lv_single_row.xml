@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/rl_homeBK"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/dp_1"
+        android:paddingTop="@dimen/dp_1"
+        android:paddingEnd="@dimen/dp_1"
+        android:paddingBottom="@dimen/dp_1">
+
+        <android.support.v7.widget.CardView
+
+            android:id="@+id/card_homeBK"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/dp_10"
+            app:cardElevation="@dimen/dp_6"
+            app:cardPreventCornerOverlap="false"
+            app:cardUseCompatPadding="true">
+
+            <RelativeLayout
+                android:id="@+id/ll_wholeBK"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/draw_dialog_white_back"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/dp_2"
+                android:visibility="visible">
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_mid_rootBK"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/dp_5"
+                    android:paddingEnd="@dimen/dp_5">
+
+                    <ImageView
+                        android:id="@+id/imgCV_profile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/rl_moreP"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_marginBottom="@dimen/dp_5"
+                        android:contentDescription="@string/app_name"
+                        android:gravity="center"
+                        android:scaleType="fitCenter"
+                        android:src="@mipmap/ic_launcher" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        android:layout_width="@dimen/dp_30"
+                        android:layout_height="@dimen/dp_30"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/dp_25"
+                        android:gravity="center"
+                        android:padding="@dimen/dp_5"
+                        android:visibility="gone" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/rl_moreP"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_alignParentBottom="true"
+                        android:gravity="bottom"
+                        android:padding="@dimen/dp_5">
+
+                        <TextView
+                            android:id="@+id/tv_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+
+                            android:background="@android:color/transparent"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:hint="@string/app_name"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:paddingStart="@dimen/dp_5"
+
+                            android:paddingEnd="@dimen/dp_5"
+
+                            android:maxLines="2"
+                            android:text="@string/app_name"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_16"
+
+                            android:visibility="visible"
+                            app:font="@{`semibold`}" />
+
+
+                        <TextView
+                            android:id="@+id/tv_descName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_name"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+
+                            android:background="@android:color/transparent"
+                            android:ellipsize="end"
+
+                            android:gravity="center_vertical"
+                            android:hint="@string/app_name"
+
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:paddingStart="@dimen/dp_5"
+                            android:paddingEnd="@dimen/dp_5"
+                            android:maxLines="2"
+                            android:text="@string/app_name"
+                            android:textColor="@color/dark_role"
+                            android:textSize="@dimen/sp_16"
+
+                            android:visibility="visible"
+                            app:font="@{`regular`}" />
+
+                        <TextView
+                            android:id="@+id/tv_data"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_descName"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            android:background="@android:color/transparent"
+                            android:ellipsize="marquee"
+                            android:gravity="center_vertical"
+                            android:hint="@string/album_name"
+
+
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:paddingStart="@dimen/dp_5"
+
+                            android:paddingEnd="@dimen/dp_5"
+                            android:singleLine="true"
+                            android:textColor="@color/grey_stroke"
+                            android:textSize="@dimen/sp_16"
+                            android:visibility="gone"
+                            app:font="@{`regular`}"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/tv_price"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_data"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="end"
+                            android:background="@android:color/transparent"
+                            android:ellipsize="marquee"
+                            android:gravity="end"
+                            android:singleLine="true"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:paddingStart="@dimen/dp_5"
+                            android:paddingEnd="@dimen/dp_5"
+                            android:text="@string/app_name"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="@dimen/sp_16"
+                            android:visibility="visible"
+                            app:font="@{`regular`}"
+
+                            />
+
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+</layout>

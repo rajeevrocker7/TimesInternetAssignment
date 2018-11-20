@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:padding="10dp">
+
+
+        <RelativeLayout
+            android:id="@+id/rel_lyt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_appIcon"
+                android:layout_width="76dp"
+                android:layout_height="76dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="start"
+                android:background="?selectableItemBackgroundBorderless"
+                android:contentDescription="@string/app_name"
+                android:gravity="center_vertical"
+                android:padding="@dimen/dp_15"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+
+                android:id="@+id/tv_title"
+                style="@style/editTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:layout_toEndOf="@+id/img_appIcon"
+                android:background="@color/full_transparent"
+                android:ellipsize="end"
+                android:gravity="start"
+                android:hint="@string/app_name"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:maxLines="2"
+                android:padding="@dimen/dp_4"
+                android:text="@string/_00_00_00"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/sp_16"
+                app:font="@{`regular`}" />
+
+            <TextView
+
+                android:id="@+id/tv_msg"
+                style="@style/editTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_title"
+                android:layout_gravity="center"
+                android:layout_toEndOf="@+id/img_appIcon"
+                android:background="@color/full_transparent"
+                android:ellipsize="end"
+                android:gravity="start"
+
+                android:hint="@string/app_name"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:maxLines="2"
+                android:padding="@dimen/dp_4"
+                android:text="@string/_00_00_00"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/sp_16"
+                app:font="@{`regular`}" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/img_B_notification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rel_lyt"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitCenter"
+            android:src="@drawable/no_product_image" />
+
+        <TextView
+
+            android:id="@+id/tv_like"
+            style="@style/editTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_B_notification"
+            android:layout_gravity="center"
+            android:background="@color/full_transparent"
+            android:ellipsize="end"
+            android:gravity="start"
+            android:hint="@string/app_name"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:maxLines="2"
+            android:padding="@dimen/dp_10"
+            android:text="@string/like"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="@dimen/sp_16"
+            app:font="@{`regular`}" />
+
+    </RelativeLayout>
+</layout>

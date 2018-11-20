@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#5403c9</color>
+    <color name="colorPrimaryDark">#3403a4</color>
+    <color name="colorAccent">#dad9d9</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="black_text">#383838</color>
+    <color name="black_transparency">#cf000000</color>
+    <color name="grey_stroke">#8E8E8E</color>
+    <!--<color name="role_selected">#f488b3ad</color>-->
+    <color name="role_selected_circle">#456E69</color>
+
+    <color name="transparent">#60FFFFFF</color>
+    <color name="full_transparent">#00000000</color>
+    <color name="grey">#7e7e7e</color>
+    <color name="dark_role">#d202544d</color>
+
+    <color name="line_grey">#a8a8a8</color>
+    <color name="light_tr">#6bb1d9d6</color>
+    <color name="light_select">#8C001C1D</color>
+    <color name="select_city_color">#B1D9D6</color>
+    <color name="chat_back_green">#00988c</color>
+    <color name="failure_red">#c40404</color>
+    <color name="call_green">#2FD671</color>
+    <color name="snack_green">#039129</color>
+    <color name="link_color">#0690d7</color>
+    <color name="light_green">#06cc84</color>
+    <color name="snack_blue">#FF0000FF</color>
+
+</resources>

@@ -1,0 +1,133 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <!--LAUNCH TIME SCREEN STYLE'S-->
+    <style name="AppTheme.Launcher">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@drawable/draw_launcher_layer</item>
+    </style>
+
+    <!--
+
+In Android O and later this error happens when you set
+
+ android:screenOrientation="portrait"
+
+    in target api 27 or above if you use
+     <item name="android:windowIsTranslucent">true</item> in style of activity and
+       android:screenOrientation="portrait" in manifest it will CRASH.
+
+     My test result ::-
+
+     keep target api / sdk 27 and <item name="android:windowIsTranslucent">true</item>
+     and remove the following lines from manifest :
+
+ android:configChanges="orientation"
+ android:screenOrientation="portrait"
+
+ bcz, <item name="android:windowIsTranslucent">true</item> will keep orientation "portrait"
+ in api 27 or above and can also solve the crash.
+
+    -->
+
+    <!--SPLASH SCREEN STYLE'S :PARENT -->
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+
+    <!--SPLASH SCREEN STYLE'S :PARENT -->
+
+
+    <style name="OKStyle" parent="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <!--To change Menu Item  Text Color And Lowercase:-->
+        <item name="android:actionMenuTextColor">#FFFFFF</item>
+            <!-- for appcompat-->
+            <item name="actionMenuTextColor">#FFFFFF</item>
+        <item name="android:actionButtonStyle">@style/ActionButtonStyle</item>
+        <!--To change Menu Item  Text Color And Lowercase:-->
+
+    </style>
+
+    <!--To change Menu Item  Text Color And Lowercase:-->
+    <style name="ActionButtonStyle" parent="Widget.AppCompat.ActionButton">
+        <item name="textAllCaps">false</item>
+            <!-- for appcompat-->
+            <item name="android:textAllCaps">false</item>
+    </style>
+
+
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <style name="LoginStyle" parent="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="AppTheme.WhiteAccent">
+        <item name="colorAccent">@color/colorPrimaryDark</item> <!-- Whatever color you want-->
+    </style>
+
+    <!--CUSTOM DIALOG PROGRESS THEME-->
+    <style name="progressDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:progressDrawable">@drawable/draw_progress_load</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="editTextStyle" parent="Widget.AppCompat.EditText">
+        <item name="android:textCursorDrawable">@null</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+
+    <!-- date time picker theme -->
+
+
+    <!--UPLOAD PHOTO DIALOG ANIMATION-->
+
+
+    <!--
+    To change Menu Item  Text Color And Lowercase:
+    https://stackoverflow.com/questions/29766411/change-text-color-of-option-menu-when-we-use-appshowasaction-always
+    https://stackoverflow.com/questions/17044790/android-actionbar-menuitem-lowercase
+    -->
+    <!--    <style name="Toolbar_Theme" parent="android:Theme.Holo">
+            <item name="android:actionMenuTextAppearance">@style/LowerCaseMenuTextAppearance</item>
+            &lt;!&ndash;<item name="android:itemTextAppearance">@style/myCustomMenuTextApearance</item>&ndash;&gt;
+        </style>
+
+        <style name="myCustomMenuTextApearance" parent="@android:style/TextAppearance.Holo.Widget.IconMenu.Item">
+            <item name="android:textColor">@android:color/primary_text_dark</item>
+        </style>
+
+        <style name="LowerCaseMenuTextAppearance" parent="android:TextAppearance.Holo.Widget.ActionBar.Menu">
+            <item name="android:textAllCaps">false</item>
+        </style>-->
+
+</resources>
