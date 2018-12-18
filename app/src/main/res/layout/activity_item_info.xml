@@ -82,6 +82,8 @@
                         android:textColor="@color/white"
                         android:textColorHint="@color/white"
                         android:textSize="@dimen/sp_16"
+                        android:shadowColor="#424242"
+                        android:shadowRadius="2"
                         app:font="@{`regular`}" />
 
                 </RelativeLayout>

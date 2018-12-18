@@ -17,21 +17,19 @@ android {
         vectorDrawables.useSupportLibrary = true
     }
 
-//     <!-- for using Images loading VIA com.rajeev.itunessongs.utils.ImageDownloader class -->
-//      useLibrary 'org.apache.http.legacy'
 
     buildTypes {
 
         // To reduce apk size
         debug {
-            minifyEnabled true
-            shrinkResources true
+            minifyEnabled false
+            shrinkResources false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         // To reduce release apk size
         release {
-            minifyEnabled true
-            shrinkResources true
+            minifyEnabled false
+            shrinkResources false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }

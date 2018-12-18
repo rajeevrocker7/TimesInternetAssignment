@@ -80,7 +80,7 @@ public class ProductsAdapter extends RecyclerView.Adapter<ProductsAdapter.PVHold
                 holder.binding.tvDescName.setText(short_desc);
             }
             else {
-                holder.binding.tvDescName.setVisibility(View.GONE);
+                holder.binding.tvDescName.setVisibility(View.INVISIBLE);
             }
 
             holder.binding.tvName.setText(title);
@@ -99,7 +99,6 @@ public class ProductsAdapter extends RecyclerView.Adapter<ProductsAdapter.PVHold
 
             Glide.with(context.getApplicationContext())
                     .load(imageUri)
-                    .centerCrop()
                     .into(new SimpleTarget<GlideDrawable>(Target.SIZE_ORIGINAL, Target.SIZE_ORIGINAL) {
                         @Override
                         public void onResourceReady(GlideDrawable resource, GlideAnimation<? super GlideDrawable> glideAnimation) {

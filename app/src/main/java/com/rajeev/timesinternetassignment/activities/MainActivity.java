@@ -77,30 +77,38 @@ public class MainActivity extends AppCompatActivity {
         internetCheck = new InternetCheck(this);
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        //      REGISTER
+        registerReceiver(internetCheck, new IntentFilter("android.net.conn.CONNECTIVITY_CHANGE"));
+
+    }
 
     @Override
     public void onResume() {
         super.onResume();
         Log.w(TAG, "onResume");
 
-        //      REGISTER
-        registerReceiver(internetCheck, new IntentFilter("android.net.conn.CONNECTIVITY_CHANGE"));
-
         // GO TO NEXT WHENEVER CONNECTED NOW
-        internetCheck.setInternetCheckInterface(isConnected -> {
-            if (isConnected) {
+        internetCheck.setInternetCheckInterface(new InternetCheck.InternetCheckInterface() {
+            @Override
+            public void isNetConnected(boolean isConnected) {
+                if (isConnected) {
 //                    MyApplication.makeASuccessSnack(binding.getRoot(), AppConstants.kWeOnlineInternet);
 
-                Log.w(TAG, "isConnected: " + true);
+                    Log.w(TAG, "isConnected: " + true);
 
-                if (MainActivity.this.dataBeansList != null && MainActivity.this.dataBeansList.size() == 0) {
-                    getProductsService(); //SERVICE HIT..
+                    if (MainActivity.this.dataBeansList != null && MainActivity.this.dataBeansList.size() == 0) {
+                        getProductsService(); //SERVICE HIT..
+                    }
+
+                } else {
+                    MyApplication.makeAFailureSnack(binding.getRoot(), AppConstants.kMakeSureInternet);
+                    binding.tvNoData.setVisibility(View.VISIBLE);
+
                 }
-
-            } else {
-                MyApplication.makeAFailureSnack(binding.getRoot(), AppConstants.kMakeSureInternet);
-                binding.tvNoData.setVisibility(View.VISIBLE);
-
             }
         });
 

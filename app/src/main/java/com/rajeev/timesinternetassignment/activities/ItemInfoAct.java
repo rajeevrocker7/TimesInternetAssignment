@@ -76,7 +76,6 @@ public class ItemInfoAct extends AppCompatActivity implements View.OnClickListen
     private InternetCheck internetCheck;
     private int targetWidth = 0;
     private int targetHeight = 0;
-    private Bitmap bitmap_n;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -111,6 +110,13 @@ public class ItemInfoAct extends AppCompatActivity implements View.OnClickListen
         }
     }
 
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+
+
+
+    }
 
     @Override
     public void onResume() {
@@ -336,7 +342,7 @@ public class ItemInfoAct extends AppCompatActivity implements View.OnClickListen
                 if (imageUrl != null && !imageUrl.isEmpty())
                     bitmap = getBitmapFromURLDownScaleIt(imageUrl, targetHeight, targetWidth);
 
-                bitmap_n = bitmap;
+                Bitmap bitmap_n = bitmap;
 
                 if (bitmap != null)
                     return bitmap;
@@ -380,7 +386,7 @@ public class ItemInfoAct extends AppCompatActivity implements View.OnClickListen
                 i.putExtras(bundle);
                 startService(i);
 
-                Log.w(AppConstants.kDefaultAppName, "NotifyService: shoot " );
+                Log.w(AppConstants.kDefaultAppName, "NotifyService: dispatched " );
 
 
             }
@@ -479,7 +485,7 @@ public class ItemInfoAct extends AppCompatActivity implements View.OnClickListen
                                     imageUrl = dataBean.getI();
 
                                     String name = dataBean.getT();
-                                    String md_time = dataBean.getMd();
+                                    String md_time = splitTime(dataBean.getMd());
                                     String shortD = dataBean.getSd();
                                     String fullDesc = dataBean.getD();
 
@@ -564,6 +570,22 @@ public class ItemInfoAct extends AppCompatActivity implements View.OnClickListen
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+
+    private String splitTime(String time)
+    {
+        String dt = time;
+        if(time!=null)
+        {
+            if(time.contains("T"))
+            {
+                String[] dtArr =  time.split("T");
+                dt  ="Date: "+dtArr[0]+",Time: "+dtArr[1];
+            }
+        }
+
+        return dt;
     }
 
     public String removeLastChar(String s) {

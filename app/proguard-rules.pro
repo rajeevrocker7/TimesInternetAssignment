@@ -21,5 +21,3 @@
 #-renamesourcefileattribute SourceFile
 -dontwarn
 -ignorewarnings
-
--keep class android.support.v8.renderscript.** {*;}

@@ -91,6 +91,8 @@ public class ApiClientConnection {
                 activity.finishAffinity();
 
                 Intent intent = new Intent(activity, SplashAct.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
 
             }

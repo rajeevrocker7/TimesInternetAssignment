@@ -168,19 +168,19 @@
                     android:src="@drawable/your_posts_add"
                     android:visibility="gone"/>-->
 
-                <ImageView
-                    android:id="@+id/img_HomeLogo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_gravity="center"
-                    android:background="@android:color/transparent"
-                    android:contentDescription="@string/app_name"
-                    android:gravity="center_vertical"
-                    android:padding="@dimen/dp_10"
-                    android:scaleType="center"
-                    android:src="@mipmap/ic_launcher"
-                    android:visibility="gone" />
+                <!--<ImageView-->
+                    <!--android:id="@+id/img_HomeLogo"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:background="@android:color/transparent"-->
+                    <!--android:contentDescription="@string/app_name"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:padding="@dimen/dp_10"-->
+                    <!--android:scaleType="center"-->
+                    <!--android:src="@mipmap/ic_launcher"-->
+                    <!--android:visibility="gone" />-->
 
 
                 <TextView

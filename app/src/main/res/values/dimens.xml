@@ -2,10 +2,8 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
     <!--dp-->
-    <dimen name="dp_0">0dp</dimen>
     <dimen name="dp_1">1dp</dimen>
     <dimen name="dp_2">2dp</dimen>
-    <dimen name="dp_3">3dp</dimen>
     <dimen name="dp_4">4dp</dimen>
     <dimen name="dp_5">5dp</dimen>
     <dimen name="dp_10">10dp</dimen>
@@ -21,7 +19,6 @@
     <dimen name="sp_16">16sp</dimen>
 
     <dimen name="dp_220">220dp</dimen>
-    <dimen name="dp_250">250dp</dimen>
     <dimen name="sp_14">14sp</dimen>
     <dimen name="sp_20">20sp</dimen>
     <dimen name="sp_18">18sp</dimen>
@@ -29,7 +26,6 @@
 
     <dimen name="design_bottom_navigation_text_size" tools:override="true">10sp</dimen>
     <dimen name="design_bottom_navigation_active_text_size" tools:override="true">10sp</dimen>
-    <dimen name="dp_90">90dp</dimen>
     <dimen name="dp_6">6dp</dimen>
 
 

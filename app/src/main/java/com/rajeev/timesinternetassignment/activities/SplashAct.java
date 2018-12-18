@@ -34,7 +34,7 @@ public class SplashAct extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
 
-        ActivitySplashBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_splash);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_splash);
 
 
         String versionName = "Version:" + BuildConfig.VERSION_NAME;
@@ -52,6 +52,8 @@ public class SplashAct extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
+
+        registerReceiver(internetCheck, new IntentFilter("android.net.conn.CONNECTIVITY_CHANGE"));
 
         if (internetCheck != null && !internetCheck.isConnect()) {
             MyApplication.makeASnack(binding.getRoot(), AppConstants.kMakeSureInternet);
@@ -98,9 +100,8 @@ public class SplashAct extends AppCompatActivity {
         Intent intent = new Intent(this, MainActivity.class);
         Bundle bundle = new Bundle();
         intent.putExtras(bundle);
-        intent.addCategory(Intent.CATEGORY_DEFAULT);
-        intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
 
         this.finish();
@@ -145,12 +146,7 @@ public class SplashAct extends AppCompatActivity {
 
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
 
-        registerReceiver(internetCheck, new IntentFilter("android.net.conn.CONNECTIVITY_CHANGE"));
-    }
 
     @Override
     protected void onStop() {
